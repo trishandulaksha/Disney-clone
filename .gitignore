@@ -7,10 +7,10 @@
 
 # testing
 /coverage
-
+# Ignore firebase setup file
+src/firebaseSetup/firebase.js
 # production
 /build
-
 # misc
 .DS_Store
 .env.local
