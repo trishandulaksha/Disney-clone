@@ -15,15 +15,26 @@ function ImageSlider() {
   return (
     <div>
       <Carousel {...settings}>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
+        <Wrap>
+          <a>
+            <img src="/images/slider/slider-badag.jpg" alt="sliderImg" />
+          </a>
+        </Wrap>
+        <Wrap>
+          <a>
+            <img src="/images/slider/slider-badging.jpg" alt="sliderImg" />
+          </a>
+        </Wrap>
+        <Wrap>
+          <a>
+            <img src="/images/slider/slider-scale.jpg" alt="sliderImg" />
+          </a>
+        </Wrap>
+        <Wrap>
+          <a>
+            <img src="/images/slider/slider-scales.jpg" alt="sliderImg" />
+          </a>
+        </Wrap>
       </Carousel>
     </div>
   );
@@ -42,6 +53,52 @@ const Carousel = styled(Slider)`
     &:hover {
       opacity: 1;
       transition: opacity 0.2s ease 0s;
+    }
+  }
+
+  ul li button {
+    &:before {
+      font-size: 10px;
+      color: rgb(150, 158, 171);
+    }
+  }
+
+  li.slick-active button:before {
+    color: white;
+  }
+
+  .slick-list {
+    overflow: initial;
+  }
+  .slick-prev {
+    left: -75px;
+  }
+  .slick-next {
+    right: -75px;
+  }
+`;
+
+const Wrap = styled.div`
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+
+  a {
+    border-radius: 4px;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+      rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+    display: block;
+    position: relative;
+    padding: 4px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &:hover {
+      padding: 0;
+      border: 4px solid rgba(249, 249, 249, 0.8);
+      transition-duration: 300ms;
     }
   }
 `;
