@@ -8,7 +8,9 @@
 # testing
 /coverage
 # Ignore firebase setup file
-src/firebaseSetup/firebase.js
+src/firebaseSetup/firebase.js 
+src/firebaseSetup/firebaseAdmin.js 
+src/firebaseSetup/disney-clone-d7933-firebase-adminsdk-dc2pk-396080a5d2.json 
 # production
 /build
 # misc
